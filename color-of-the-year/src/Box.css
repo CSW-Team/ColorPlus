@@ -1,14 +1,14 @@
 .color_box {
   display: flex;
-  position: fixed;
   align-items: flex-end;
   justify-content: center;
   width: 100px;
   height: 200px;
   border-radius: 10px;
+  margin-bottom: 40px;
 }
 
 .color_box_in_text {
-  color: white;
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }

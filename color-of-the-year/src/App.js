@@ -1,24 +1,14 @@
-// import logo from "./logo.svg";
-// import "./App.css";
-
-// function App() {
-//   return <h1></h1>;
-// }
-
-// export default App;
-
 import React from "react";
 import "./App.css";
-import "./Box.js";
+import Box from "./Box.js";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="boxs">
-        <Box id={1233} year={2021} />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <Box year={2020} color="black" />
+      <Box year={2021} color="blue" />
+    </div>
+  );
 }
 
 export default App;
