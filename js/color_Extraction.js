@@ -1,8 +1,9 @@
 let rgb_box_1 = document.getElementById("rgb_box_1");
+let rgb_box_2 = document.getElementById("rgb_box_2");
+let rgb_box_3 = document.getElementById("rgb_box_3");
 let colorIndicator = document.getElementById("color-indicator");
-let rgb_red = document.getElementById("rgb_red");
-let rgb_green = document.getElementById("rgb_green");
-let rgb_blue = document.getElementById("rgb_blue");
+
+
 
 
 const colorPicker = new iro.ColorPicker("#color-picker",{
@@ -24,21 +25,18 @@ const colorPicker = new iro.ColorPicker("#color-picker",{
         {
             component: iro.ui.Slider,
             options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
                 sliderType: 'red',
             }
         },
         {
             component: iro.ui.Slider,
             options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
                 sliderType: 'green',
             }
         },
         {
             component: iro.ui.Slider,
             options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
                 sliderType: 'blue',
             }
         },
@@ -52,12 +50,8 @@ const colorPicker = new iro.ColorPicker("#color-picker",{
 colorPicker.on(["color:init", "color:change"], function(color){
     colorIndicator.style.backgroundColor = color.hexString;
     rgb_box_1.value = color.hexString;
-
-    values.innerHTML = [
-        "hex: " + color.hexString,
-        "rgb: " + color.rgbString,
-        "hsl: " + color.hslString].
-        join("<br>");
+    rgb_box_2.value = color.rgbString;
+    rgb_box_3.value = color.hslString;
 
 });
 

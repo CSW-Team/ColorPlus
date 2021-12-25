@@ -7,7 +7,7 @@
     <title>color plus</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main_color_Extraction.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -43,16 +43,24 @@
                 <div class="color_list">
                     <div class="color-indicator" id="color-indicator"></div>
                     <div class="rgb_box">
-                        &nbsp;&nbsp;<input class="rgb_box_1" id="rgb_box_1" onkeyup="enterkey()" type="text" >
-                        
-                        
+                        HEX:<input class="rgb_box_1" id="rgb_box_1" onkeyup="enterkey()" type="text" > <br> <br>
+                        RGB:<input class="rgb_box_2" id="rgb_box_2" onkeyup="enterkey()" type="text" > <br> <br>
+                        HSL:<input class="rgb_box_3" id="rgb_box_3" onkeyup="enterkey()" type="text" >
+
                     </div>
                 </div>
-                <div class="color_one">
-                    <div id="color-picker"></div>
-
-                    
+                <div class="color_rgb">
+                    <div class="color_R">
+                        | R
+                    </div>
+                    <div class="color_G">
+                        | G
+                    </div>
+                    <div class="color_B">
+                        | B
+                    </div>
                 </div>
+                <div id="color-picker"></div>
             </div>
             </div>
     </div>
