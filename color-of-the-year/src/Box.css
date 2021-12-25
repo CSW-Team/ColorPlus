@@ -1,0 +1,15 @@
+.color_box {
+  display: flex;
+  position: fixed;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100px;
+  height: 200px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.color_box_in_text {
+  color: white;
+  margin-bottom: 10px;
+}
