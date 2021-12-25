@@ -1,0 +1,28 @@
+.start_cover{ /* 시작화면 로고 넣을자리 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 100;
+}
+
+.start_img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.main_container{
+    display: flex;
+    width: 100%;
+    height: 30rem;
+    justify-content: center;
+}
+
+

@@ -1,0 +1,17 @@
+.color_picker{
+    position: relative;
+}
+
+.color_indicator{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#color_picker{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+}
