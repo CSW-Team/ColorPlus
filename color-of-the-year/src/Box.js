@@ -3,7 +3,7 @@ import "./Box.css";
 
 function Box({ year, color }) {
   return (
-    <div class="color_box" style="backgroundcolor:"{color} >
+    <div class="color_box" style={{ backgroundcolor: { color } }}>
       <div class="color_box_in_text">{year}</div>
     </div>
   );
