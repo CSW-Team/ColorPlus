@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
     background-color: white;
-    z-index: 100;
+    z-index: 10000;
 }
 
 .start_img{
@@ -22,7 +22,21 @@
     display: flex;
     width: 100%;
     height: 30rem;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color_list{
+
+}
+.rgb_box{
+
+}
+
+.rgb_box_1{
+    border:0 solid black;
+    border-bottom: solid 1px rgba(129, 129, 129, 0.767);
+    
 }
 
 

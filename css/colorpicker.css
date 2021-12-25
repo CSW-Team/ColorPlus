@@ -1,17 +1,23 @@
-.color_picker{
+.color-picker{
     position: relative;
 }
 
-.color_indicator{
+.color-indicator{
     display: inline-block;
     width: 200px;
     height: 200px;
     background-color: #fff;
     border-radius: 20px;
+    box-shadow: rgba(82, 82, 82, 0.1) 5px 5px 5px 5px;
+    margin-bottom: 10px;
+
 }
 
-#color_picker{
+#color-picker{
     display: inline-block;
     vertical-align: middle;
     margin-left: 40px;
+    margin-right: 300px;
 }
+
+

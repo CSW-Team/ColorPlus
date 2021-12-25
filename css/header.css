@@ -7,8 +7,11 @@
     justify-content: center;
     box-shadow: rgba(126, 126, 126, 0.1) 0px 6px 40px 0px;
     margin-bottom: 10px;
+    z-index: 2;
 }
 
 .header_logo{
-    height: 10rem;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    height: 2.8rem;
 }
