@@ -43,6 +43,35 @@ colorPicker.on(["color:init", "color:change"], function () {
     hexInput2.value = colorPicker.colors[1].hexString;
     rgbInput2.value = colorPicker.colors[1].rgbString;
     hslInput2.value = colorPicker.colors[1].hslString;
+
+    var material1_red = colorPicker.colors[0].red;
+    var material1_green = colorPicker.colors[0].green;
+    var material1_blue = colorPicker.colors[0].blue;
+
+    var material2_red = colorPicker.colors[1].red;
+    var material2_green = colorPicker.colors[1].green;
+    var material2_blue = colorPicker.colors[1].blue;
+
+    output_red = material1_red + material2_red;
+    output_red = output_red / 2;
+    output_red = Math.round(output_red);
+
+    output_green = material1_green + material2_green;
+    output_green = output_green / 2;
+    output_green = Math.round(output_green);
+
+    output_blue = material1_blue + material2_blue;
+    output_blue = output_blue / 2;
+    output_blue = Math.round(output_blue);
+
+    color_fusion_output.style.backgroundColor =
+      "rgb(" +
+      String(output_red) +
+      "," +
+      String(output_green) +
+      "," +
+      String(output_blue) +
+      ")";
   });
 });
 
@@ -69,23 +98,3 @@ rgbInput2.addEventListener("change", function () {
 hslInput2.addEventListener("change", function () {
   colorPicker.colors[1].hslInput2 = this.value;
 });
-
-var material1_red = colorPicker.colors[0].red;
-var material1_green = colorPicker.colors[0].green;
-var material1_blue = colorPicker.colors[0].blue;
-
-var material2_red = colorPicker.colors[1].red;
-var material2_green = colorPicker.colors[1].green;
-var material2_blue = colorPicker.colors[1].blue;
-
-output_red = material1_red + material2_red;
-output_red = output_red / 2;
-output_red = Math.round(output_red);
-
-output_green = material1_green + material2_green;
-output_green = output_green / 2;
-output_green = Math.round(output_green);
-
-output_blue = material1_blue + material2_blue;
-output_blue = output_blue / 2;
-output_blue = Math.round(output_blue);
