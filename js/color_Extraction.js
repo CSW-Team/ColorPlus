@@ -1,8 +1,8 @@
- //시작했을때 사라지는 logo
-
-
 let rgb_box_1 = document.getElementById("rgb_box_1");
+let rgb_box_2 = document.getElementById("rgb_box_2");
+let rgb_box_3 = document.getElementById("rgb_box_3");
 let colorIndicator = document.getElementById("color-indicator");
+
 
 
 
@@ -25,35 +25,33 @@ const colorPicker = new iro.ColorPicker("#color-picker",{
         {
             component: iro.ui.Slider,
             options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
                 sliderType: 'red',
             }
         },
         {
             component: iro.ui.Slider,
             options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
                 sliderType: 'green',
             }
         },
         {
             component: iro.ui.Slider,
             options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
                 sliderType: 'blue',
             }
         },
         
-      ]
-      
+        
+      ],
 });
+
 
 
 colorPicker.on(["color:init", "color:change"], function(color){
     colorIndicator.style.backgroundColor = color.hexString;
     rgb_box_1.value = color.hexString;
-    
-
+    rgb_box_2.value = color.rgbString;
+    rgb_box_3.value = color.hslString;
 
 });
 
@@ -63,7 +61,3 @@ function enterkey() {
         colorIndicator.style.backgroundColor = rgb_box_1.value
     }
 }
-
-
-
-
