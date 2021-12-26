@@ -12,9 +12,36 @@
   margin-bottom: 10px;
 }
 
+.color-indicator2 {
+  display: inline-block;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(82, 82, 82, 0.1) 5px 5px 5px 5px;
+  margin-bottom: 10px;
+}
+
+.color-indicator3 {
+  display: inline-block;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(82, 82, 82, 0.1) 5px 5px 5px 5px;
+  margin-bottom: 10px;
+}
+
 #color-picker {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 200px;
   margin-left: 40px;
   margin-right: 300px;
+}
+
+.color_list {
+  margin-top: 100px;
 }

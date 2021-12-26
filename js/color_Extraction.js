@@ -1,63 +1,66 @@
-let rgb_box_1 = document.getElementById("rgb_box_1");
-let rgb_box_2 = document.getElementById("rgb_box_2");
-let rgb_box_3 = document.getElementById("rgb_box_3");
+var hexInput = document.getElementById("hexInput");
+var rgbInput = document.getElementById("rgbInput");
+var hslInput = document.getElementById("hslInput");
 let colorIndicator = document.getElementById("color-indicator");
 
-
-
-
-const colorPicker = new iro.ColorPicker("#color-picker",{
-    layout: [
-        { 
-          component: iro.ui.Wheel,
-          options: {
-            wheelLightness : false,
-            width : 300,
-            borderColor: rgb_box_1,
-          }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-                sliderType: 'value',
-            }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-                sliderType: 'red',
-            }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-                sliderType: 'green',
-            }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-                sliderType: 'blue',
-            }
-        },
-        
-        
-      ],
+const colorPicker = new iro.ColorPicker("#color-picker", {
+  layout: [
+    {
+      component: iro.ui.Wheel,
+      options: {
+        wheelLightness: false,
+        width: 300,
+      },
+    },
+    {
+      component: iro.ui.Slider,
+      options: {
+        sliderType: "value",
+      },
+    },
+    {
+      component: iro.ui.Slider,
+      options: {
+        sliderType: "red",
+      },
+    },
+    {
+      component: iro.ui.Slider,
+      options: {
+        sliderType: "green",
+      },
+    },
+    {
+      component: iro.ui.Slider,
+      options: {
+        sliderType: "blue",
+      },
+    },
+  ],
 });
 
+colorPicker.on(["color:init", "color:change"], function (color) {
+  colorIndicator.style.backgroundColor = color.hexString;
 
-
-colorPicker.on(["color:init", "color:change"], function(color){
-    colorIndicator.style.backgroundColor = color.hexString;
-    rgb_box_1.value = color.hexString;
-    rgb_box_2.value = color.rgbString;
-    rgb_box_3.value = color.hslString;
-
+  hexInput.value = color.hexString;
+  rgbInput.value = color.rgbString;
+  hslInput.value = color.hslString;
 });
-
 
 function enterkey() {
-	if (window.event.keyCode == 13) {
-        colorIndicator.style.backgroundColor = rgb_box_1.value
-    }
+  if (window.event.keyCode == 13) {
+    colorIndicator.style.backgroundColor = rgb_box_1.value;
+  }
 }
+
+hexInput.addEventListener("change", function () {
+  colorPicker.color.hexString = this.value;
+});
+
+rgbInput.addEventListener("change", function () {
+  colorPicker.color.rgbString = this.value;
+});
+
+hslInput.addEventListener("change", function () {
+  colorPicker.color.hslString = this.value;
+});

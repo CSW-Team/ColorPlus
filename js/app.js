@@ -1,69 +1,33 @@
- //시작했을때 사라지는 logo
-
-
-let rgb_box_1 = document.getElementById("rgb_box_1");
 let colorIndicator = document.getElementById("color-indicator");
+let colorIndicator2 = document.getElementById("color-indicator2");
+let colorIndicator3 = document.getElementById("color-indicator3");
 
-
-
-const colorPicker = new iro.ColorPicker("#color-picker",{
-    layout: [
-        { 
-          component: iro.ui.Wheel,
-          options: {
-            wheelLightness : false,
-            width : 300,
-            borderColor: rgb_box_1,
-          }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-                sliderType: 'value',
-            }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
-                sliderType: 'red',
-            }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
-                sliderType: 'green',
-            }
-        },
-        {
-            component: iro.ui.Slider,
-            options: {
-            //can also be 'saturation', 'value', 'red', 'green', 'blue', 'alpha' or 'kelvin'
-                sliderType: 'blue',
-            }
-        },
-        
-      ]
-      
+const colorPicker = new iro.ColorPicker("#color-picker", {
+  layout: [
+    {
+      component: iro.ui.Wheel,
+      options: {
+        wheelLightness: false,
+        width: 450,
+      },
+    },
+  ],
+  colors: [
+    "rgb(255, 0, 0)", // pure red
+    "rgb(0, 255, 0)", // pure green
+    "rgb(0, 0, 255)", // pure blue
+  ],
 });
 
-
-colorPicker.on(["color:init", "color:change"], function(color){
-    colorIndicator.style.backgroundColor = color.hexString;
-    rgb_box_1.value = color.hexString;
-    
-
-
+colorPicker.on(["color:init", "color:change"], function () {
+  colorPicker.colors.forEach(function () {
+    colorIndicator.style.backgroundColor = colorPicker.colors[0].rgbaString;
+    colorIndicator2.style.backgroundColor = colorPicker.colors[1].rgbaString;
+    colorIndicator3.style.backgroundColor = colorPicker.colors[2].rgbaString;
+    hexInput.value = colorPicker.colors[0].hexString;
+  });
 });
 
-
-function enterkey() {
-	if (window.event.keyCode == 13) {
-        colorIndicator.style.backgroundColor = rgb_box_1.value
-    }
-}
-
-
-
-
+hexInput.addEventListener("change", function () {
+  colorPicker.color.hexString = this.value;
+});

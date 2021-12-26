@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>color puls</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/color_fusion.css">
-    <link rel="stylesheet" href="/css/colorpicker.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/font.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/color_fusion.css" />
+    <link rel="stylesheet" href="/css/colorpicker.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/sidebar.css" />
     <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <div class="start_cover" id="start_cover">
-        <img class="start_img" src="/img/colorplus.png">
+      <img class="start_img" src="/img/colorplus.png" />
     </div>
     <div class="container">
-        <div class="header">
-            <input type="checkbox" id="menuicon">
-            <label for="menuicon">
-                <i class="fas fa-bars"></i>
-            </label>
-            <div class="sidebar">
-                <div class="sidebar_list">
-                    <div class="sidebar_list_1">
-                        <a href="/index.html">| 메인</a>
-                    </div>
-                    <div class="sidebar_list_2">
-                        <a href="/html/color_Extraction.html">| 색 추출</a>
-                    </div>
-                    <div class="sidebar_list_3">
-                        <a href="/html/color_of_the_year.html">| color of the year</a>
-                    </div>
-                </div>
+      <div class="header">
+        <input type="checkbox" id="menuicon" />
+        <label for="menuicon">
+          <i class="fas fa-bars"></i>
+        </label>
+        <div class="sidebar">
+          <div class="sidebar_list">
+            <div class="sidebar_list_1">
+              <a href="/index.html">| 메인</a>
             </div>
-            <img class="header_logo" src="/img/colorplus
-.png">
-        </div>
-
-
-        <div class="main_container">
-            <div class="color-picker"></div>
-            <div class="color_list">
-                <div class="color-indicator" id="color-indicator"></div>
-                <div class="rgb_box">
-                    &nbsp;&nbsp;<input class="rgb_box_1" id="rgb_box_1" onkeyup="enterkey()" type="text">
-
-                </div>
+            <div class="sidebar_list_2">
+              <a href="/html/color_Extraction.html">| 색 추출</a>
             </div>
-
-            <div id="color-picker"></div>
-
-
-
+            <div class="sidebar_list_3">
+              <a href="/html/color_of_the_year.html">| color of the year</a>
+            </div>
+          </div>
         </div>
-        <div class="color_fusion">
+        <img class="header_logo" src="/img/colorplus.png" />
+      </div>
 
+      <div class="main_container">
+        <div class="color-picker"></div>
+        <div class="color_list">
+          <div class="color-indicator" id="color-indicator"></div>
+          <div class="color-indicator2" id="color-indicator2"></div>
+          <div class="color-indicator3" id="color-indicator3"></div>
+
+          <div class="rgb_box">
+            &nbsp;&nbsp;<input class="rgb_box_1" id="hexInput" type="text" />
+          </div>
+          <div class="color-indicator3" id="color-indicator4"></div>
+          <div class="color-indicator3" id="color-indicator5"></div>
         </div>
+
+        <div id="color-picker"></div>
+      </div>
+      <div class="color_fusion"></div>
     </div>
 
     <script src="/js/app.js"></script>
     <script>
-        $("div.start_cover").delay(300).fadeOut(700);
+      $("div.start_cover").delay(300).fadeOut(700);
     </script>
-
-</body>
-
+  </body>
 </html>
