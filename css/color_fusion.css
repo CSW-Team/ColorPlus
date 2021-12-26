@@ -28,7 +28,7 @@ input[id="color_fusion_true"] + label + label {
 
 div[class="color_fusion"] {
   position: fixed;
-  top: 937px;
+  top: 1300px;
   display: flex;
   align-items: center;
   justify-items: center;
