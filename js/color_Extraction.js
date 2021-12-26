@@ -47,12 +47,6 @@ colorPicker.on(["color:init", "color:change"], function (color) {
   hslInput.value = color.hslString;
 });
 
-function enterkey() {
-  if (window.event.keyCode == 13) {
-    colorIndicator.style.backgroundColor = rgb_box_1.value;
-  }
-}
-
 hexInput.addEventListener("change", function () {
   colorPicker.color.hexString = this.value;
 });

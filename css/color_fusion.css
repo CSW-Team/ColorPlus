@@ -1,0 +1,85 @@
+.fa-arrow-up {
+  position: absolute;
+  padding: 10px 10px 10px 10px;
+  box-shadow: rgb(194, 194, 194) 0px 2px 2px 1px;
+  border-radius: 80px;
+  top: 840px;
+  left: 1830px;
+  font-size: 50px;
+  color: rgb(107, 106, 106);
+  z-index: 10;
+}
+
+.fa-arrow-down {
+  position: absolute;
+  padding: 10px 10px 10px 10px;
+  box-shadow: rgb(194, 194, 194) 0px 2px 2px 1px;
+  border-radius: 80px;
+  top: 840px;
+  left: 1830px;
+  font-size: 50px;
+  color: rgb(107, 106, 106);
+  z-index: 10;
+}
+
+input[id="color_fusion_true"] + label + label {
+  display: none;
+}
+
+div[class="color_fusion"] {
+  position: fixed;
+  top: 937px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 280px;
+  box-shadow: rgb(194, 194, 194) 0px -2px 2px 1px;
+  transition: 0.35s;
+}
+input[id="color_fusion_true"]:checked + label + label + div {
+  top: 680px;
+}
+
+input[id="color_fusion_true"]:checked + label + label {
+  display: block;
+}
+
+input[id="color_fusion_true"]:checked + label {
+  display: none;
+}
+
+.fa-plus {
+  font-size: 50px;
+}
+
+.color_material_1 {
+  margin-left: 200px;
+  margin-right: 80px;
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(82, 82, 82, 0.1) 5px 5px 5px 5px;
+  border-radius: 20px;
+}
+
+.color_material_2 {
+  margin-left: 80px;
+  margin-right: 80px;
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(82, 82, 82, 0.1) 5px 5px 5px 5px;
+  border-radius: 20px;
+}
+
+.fa-equals {
+  font-size: 50px;
+}
+
+.color_fusion_output {
+  margin-left: 80px;
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(82, 82, 82, 0.1) 5px 5px 5px 5px;
+  border-radius: 20px;
+}

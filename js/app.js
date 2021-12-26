@@ -1,6 +1,18 @@
 let colorIndicator = document.getElementById("color-indicator");
 let colorIndicator2 = document.getElementById("color-indicator2");
 let colorIndicator3 = document.getElementById("color-indicator3");
+//-------------------------------------------------------------------------------------------
+let color_material_1 = document.getElementById("color_material_1");
+let color_material_2 = document.getElementById("color_material_2");
+let color_fusion_output = document.getElementById("color_fusion_output");
+
+var hexInput = document.getElementById("hexInput");
+var rgbInput = document.getElementById("rgbInput");
+var hslInput = document.getElementById("hslInput");
+
+var hexInput2 = document.getElementById("hexInput2");
+var rgbInput2 = document.getElementById("rgbInput2");
+var hslInput2 = document.getElementById("hslInput2");
 
 const colorPicker = new iro.ColorPicker("#color-picker", {
   layout: [
@@ -15,19 +27,65 @@ const colorPicker = new iro.ColorPicker("#color-picker", {
   colors: [
     "rgb(255, 0, 0)", // pure red
     "rgb(0, 255, 0)", // pure green
-    "rgb(0, 0, 255)", // pure blue
   ],
 });
 
 colorPicker.on(["color:init", "color:change"], function () {
   colorPicker.colors.forEach(function () {
-    colorIndicator.style.backgroundColor = colorPicker.colors[0].rgbaString;
-    colorIndicator2.style.backgroundColor = colorPicker.colors[1].rgbaString;
-    colorIndicator3.style.backgroundColor = colorPicker.colors[2].rgbaString;
+    colorIndicator.style.backgroundColor = colorPicker.colors[0].rgbString;
+    color_material_1.style.backgroundColor = colorPicker.colors[0].rgbString;
     hexInput.value = colorPicker.colors[0].hexString;
+    rgbInput.value = colorPicker.colors[0].rgbString;
+    hslInput.value = colorPicker.colors[0].hslString;
+
+    colorIndicator2.style.backgroundColor = colorPicker.colors[1].rgbString;
+    color_material_2.style.backgroundColor = colorPicker.colors[1].rgbString;
+    hexInput2.value = colorPicker.colors[1].hexString;
+    rgbInput2.value = colorPicker.colors[1].rgbString;
+    hslInput2.value = colorPicker.colors[1].hslString;
   });
 });
 
 hexInput.addEventListener("change", function () {
-  colorPicker.color.hexString = this.value;
+  colorPicker.colors[0].hexString = this.value;
 });
+
+rgbInput.addEventListener("change", function () {
+  colorPicker.colors[0].rgbInput = this.value;
+});
+
+hslInput.addEventListener("change", function () {
+  colorPicker.colors[0].hslInput = this.value;
+});
+//-------------------------------------------------------
+hexInput2.addEventListener("change", function () {
+  colorPicker.colors[1].hexInput2 = this.value;
+});
+
+rgbInput2.addEventListener("change", function () {
+  colorPicker.colors[1].rgbInput2 = this.value;
+});
+
+hslInput2.addEventListener("change", function () {
+  colorPicker.colors[1].hslInput2 = this.value;
+});
+
+var material1_red = colorPicker.colors[0].red;
+var material1_green = colorPicker.colors[0].green;
+var material1_blue = colorPicker.colors[0].blue;
+
+var material2_red = colorPicker.colors[1].red;
+var material2_green = colorPicker.colors[1].green;
+var material2_blue = colorPicker.colors[1].blue;
+
+output_red = material1_red + material2_red;
+output_red = output_red / 2;
+output_red = Math.round(output_red);
+
+output_green = material1_green + material2_green;
+output_green = output_green / 2;
+output_green = Math.round(output_green);
+
+output_blue = material1_blue + material2_blue;
+output_blue = output_blue / 2;
+output_blue = Math.round(output_blue);
