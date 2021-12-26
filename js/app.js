@@ -41,10 +41,7 @@ const colorPicker = new iro.ColorPicker("#color-picker", {
       },
     },
   ],
-  colors: [
-    "rgb(255, 0, 0)", // pure red
-    "rgb(0, 255, 0)", // pure green
-  ],
+  colors: ["rgb(255, 0, 0)", "rgb(0, 255, 0)"],
 });
 
 colorPicker.on(["color:init", "color:change"], function () {

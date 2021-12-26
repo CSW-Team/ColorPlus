@@ -45,4 +45,9 @@ input[id="menuicon"]:checked + label + div {
 
 .sidebar_list_3 {
   font-size: 26px;
+  margin-bottom: 630px;
+}
+
+.make_by {
+  color: rgb(136, 136, 136);
 }
