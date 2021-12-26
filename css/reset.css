@@ -136,3 +136,9 @@ a {
   text-decoration-line: none;
   color: black;
 }
+
+input {
+  border: 0 solid black;
+  border-bottom: solid 1px rgba(129, 129, 129, 0.767);
+  margin-bottom: 10px;
+}

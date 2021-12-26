@@ -17,22 +17,6 @@
   font-size: 20px;
 }
 
-.rgb_box_1 {
-  font-size: 15px;
-  border: 0 solid black;
-  border-bottom: solid 1px rgba(129, 129, 129, 0.767);
-}
-.rgb_box_2 {
-  font-size: 15px;
-  border: 0 solid black;
-  border-bottom: solid 1px rgba(129, 129, 129, 0.767);
-}
-.rgb_box_3 {
-  font-size: 15px;
-  border: 0 solid black;
-  border-bottom: solid 1px rgba(129, 129, 129, 0.767);
-}
-
 #color_hex_rgb_hsl {
   margin-left: 7px;
   margin-top: 10px;

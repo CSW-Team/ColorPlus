@@ -14,6 +14,23 @@ var hexInput2 = document.getElementById("hexInput2");
 var rgbInput2 = document.getElementById("rgbInput2");
 var hslInput2 = document.getElementById("hslInput2");
 
+var color_fusion_output_rgb = document.getElementById(
+  "color_fusion_output_rgb"
+);
+
+var color_fusion_output_hex = document.getElementById(
+  "color_fusion_output_hex"
+);
+
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
 const colorPicker = new iro.ColorPicker("#color-picker", {
   layout: [
     {
@@ -52,7 +69,7 @@ colorPicker.on(["color:init", "color:change"], function () {
     var material2_green = colorPicker.colors[1].green;
     var material2_blue = colorPicker.colors[1].blue;
 
-    output_red = material1_red + material2_red;
+    var output_red = material1_red + material2_red;
     output_red = output_red / 2;
     output_red = Math.round(output_red);
 
@@ -63,6 +80,21 @@ colorPicker.on(["color:init", "color:change"], function () {
     output_blue = material1_blue + material2_blue;
     output_blue = output_blue / 2;
     output_blue = Math.round(output_blue);
+
+    color_fusion_output_hex.value = rgbToHex(
+      output_red,
+      output_green,
+      output_blue
+    );
+
+    color_fusion_output_rgb.value =
+      "rgb(" +
+      String(output_red) +
+      "," +
+      String(output_green) +
+      "," +
+      String(output_blue) +
+      ")";
 
     color_fusion_output.style.backgroundColor =
       "rgb(" +
@@ -80,21 +112,21 @@ hexInput.addEventListener("change", function () {
 });
 
 rgbInput.addEventListener("change", function () {
-  colorPicker.colors[0].rgbInput = this.value;
+  colorPicker.colors[0].rgbString = this.value;
 });
 
 hslInput.addEventListener("change", function () {
-  colorPicker.colors[0].hslInput = this.value;
+  colorPicker.colors[0].hslString = this.value;
 });
-//-------------------------------------------------------
+
 hexInput2.addEventListener("change", function () {
-  colorPicker.colors[1].hexInput2 = this.value;
+  colorPicker.colors[1].hexString = this.value;
 });
 
 rgbInput2.addEventListener("change", function () {
-  colorPicker.colors[1].rgbInput2 = this.value;
+  colorPicker.colors[1].rgbString = this.value;
 });
 
 hslInput2.addEventListener("change", function () {
-  colorPicker.colors[1].hslInput2 = this.value;
+  colorPicker.colors[1].hslString = this.value;
 });
