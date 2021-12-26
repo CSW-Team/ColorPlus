@@ -1,37 +1,33 @@
-.start_cover{ /* 시작화면 로고 넣을자리 */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 10000;
+.start_cover {
+  /* 시작화면 로고 넣을자리 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10000;
 }
 
-.start_img{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+.start_img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.container{
-    width: 100%;
-    height: 100%;
+.container {
+  width: 100%;
+  height: 100%;
 }
 
-.main_container{
-    display: flex;
-    width: 100%;
-    height: 30rem;
-    justify-content: space-between;
-    align-items: center;
+.main_container {
+  display: flex;
+  width: 100%;
+  height: 30rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-
-.rgb_box_1{
-    border:0 solid black;
-    border-bottom: solid 1px rgba(129, 129, 129, 0.767);
-    
+.rgb_box_1 {
+  border: 0 solid black;
+  border-bottom: solid 1px rgba(129, 129, 129, 0.767);
 }
-
-

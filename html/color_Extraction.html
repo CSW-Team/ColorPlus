@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,14 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/color_fusion.css">   
+    <link rel="stylesheet" href="/css/color_fusion.css">
     <link rel="stylesheet" href="/css/colorpicker2.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="/css/sidebar.css">
     <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -39,35 +41,36 @@
                 </div>
             </div>
             <img class="header_logo" src="/img/colorplus02-2.png">
-        </div> 
+        </div>
 
-            <div class="main_container">
-                <div class="color-picker"></div>
-                <div class="color_list">
-                    <div class="color-indicator" id="color-indicator"></div>
-                    <div class="rgb_box">
-                        HEX:<input class="rgb_box_1" id="rgb_box_1" onkeyup="enterkey()" type="text" > <br> <br>
-                        RGB:<input class="rgb_box_2" id="rgb_box_2" onkeyup="enterkey()" type="text" > <br> <br>
-                        HSL:<input class="rgb_box_3" id="rgb_box_3" onkeyup="enterkey()" type="text" >
+        <div class="main_container">
+            <div class="color-picker"></div>
+            <div class="color_list">
+                <div class="color-indicator" id="color-indicator"></div>
+                <div class="rgb_box">
+                    HEX:<input class="rgb_box_1" id="rgb_box_1" onkeyup="enterkey()" type="text"> <br> <br>
+                    RGB:<input class="rgb_box_2" id="rgb_box_2" onkeyup="enterkey()" type="text"> <br> <br>
+                    HSL:<input class="rgb_box_3" id="rgb_box_3" onkeyup="enterkey()" type="text">
 
-                    </div>
                 </div>
-                <div class="color_rgb">
-                    <div class="color_R">
-                        | R
-                    </div>
-                    <div class="color_G">
-                        | G
-                    </div>
-                    <div class="color_B">
-                        | B
-                    </div>
+            </div>
+            <div class="color_rgb">
+                <div class="color_R">
+                    | R
                 </div>
-                <div id="color-picker"></div>
+                <div class="color_G">
+                    | G
+                </div>
+                <div class="color_B">
+                    | B
+                </div>
             </div>
-            </div>
+            <div id="color-picker"></div>
+        </div>
     </div>
-    
+    </div>
+
     <script src="/js/color_Extraction.js"></script>
 </body>
+
 </html>
