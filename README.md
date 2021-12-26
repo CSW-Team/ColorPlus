@@ -14,7 +14,7 @@ team sunonethree ✨
 ```
 .
 ├── README.md
-├── build
+├── coty
 │   ├── asset-manifest.json
 │   ├── favicon.ico
 │   ├── index.html
@@ -39,7 +39,7 @@ team sunonethree ✨
 │   ├── colorplus.png
 │   └── hanseithonlogo.webp
 ├── index.html
-├── js
-│   ├── app.js
-│   └── color_Extraction.js
+└── js
+    ├── app.js
+    └── color_Extraction.js
 ```
