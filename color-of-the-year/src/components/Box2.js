@@ -1,7 +1,7 @@
 import React from "react";
 import "./Box2.css";
 
-function Box({ year, color, color2, color_name, color2_name }) {
+function Box2({ year, color, color2, color_name, color2_name }) {
   return (
     <div>
       <div class="color_box" style={{ backgroundColor: color }}>
@@ -14,4 +14,4 @@ function Box({ year, color, color2, color_name, color2_name }) {
   );
 }
 
-export default Box;
+export default Box2;
