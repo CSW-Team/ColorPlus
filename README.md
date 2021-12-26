@@ -42,12 +42,4 @@ team sunonethree ✨
 ├── js
 │   ├── app.js
 │   └── color_Extraction.js
-└── navbar
-    ├── README.md
-    ├── build
-    ├── node_modules
-    ├── package.json
-    ├── public
-    ├── src
-    └── yarn.lock
 ```
