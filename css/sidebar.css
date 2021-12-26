@@ -1,52 +1,48 @@
-input[id="menuicon"]{
-    display: none;
+input[id="menuicon"] {
+  display: none;
 }
 
-.fa-bars{
-    position: absolute;
-    top: 10px;
-    left: 50px;
-    color: rgb(77, 73, 73);
-    font-size: 40px;
-    z-index: 1000;
+.fa-bars {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  color: rgb(77, 73, 73);
+  font-size: 40px;
+  z-index: 1000;
 }
 
 div[class="sidebar"] {
-    width:300px;
-    height:100%;
-    background:#fff;
-    position:fixed;
-    top:0;
-    left:-400px;
-    z-index:1;
-    transition:all .35s;
-    box-shadow: rgb(146, 145, 145) 0px 0px 3px 2px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: -400px;
+  z-index: 1;
+  transition: all 0.35s;
+  box-shadow: rgb(146, 145, 145) 0px 0px 3px 2px;
 }
 input[id="menuicon"]:checked + label + div {
-    left:0;
+  left: 0;
 }
 
-.sidebar_list{
-    position: fixed;
-    margin-top: 120px;
-    width: 250px;
-    height: 100%;
-    margin-left: 50px;
-
+.sidebar_list {
+  position: fixed;
+  margin-top: 120px;
+  width: 250px;
+  height: 100%;
+  margin-left: 50px;
 }
 
-.sidebar_list_1{
-    font-size: 26px;
-    margin-bottom: 25px;
+.sidebar_list_1 {
+  font-size: 26px;
+  margin-bottom: 25px;
 }
-.sidebar_list_2{
-    font-size: 26px;
-    margin-bottom: 25px;
-}
-
-.sidebar_list_3{
-    font-size: 26px;
+.sidebar_list_2 {
+  font-size: 26px;
+  margin-bottom: 25px;
 }
 
-
-
+.sidebar_list_3 {
+  font-size: 26px;
+}
